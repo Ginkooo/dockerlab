@@ -1,0 +1,10 @@
+Instrukcja uruchamiania:
+
+1. docker-compose up
+2. docker exec -it javacon bash
+wpisujemy w shellu kontenera:
+3. java -cp 'mysql-connector-(wersja):.' MyClass
+Postepujemy zgodnie z informacjami na ekranie
+
+
+Niestety nie udało mi się podłączyć kontenerów do predefiniowanej sieci, ciągle występowały dośc nietypowe błędy
