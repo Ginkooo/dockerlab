@@ -1,0 +1,27 @@
+version: '2'
+services:
+ mysql:
+  image: mysql:5.7
+  container_name: pwcho201883730
+  ports:
+   - "3306:3306"
+  environment:
+   - MYSQL_DATABASE=mydb
+   - MYSQL_ROOT_PASSWORD=pczajka
+   - MYSQL_USER=pczajka
+   - MYSQL_PASSWORD=pczajka
+  networks:
+   - bridgeZadanie1
+ javacon:
+  image: ginkooo/dockerlab
+  container_name: javacon
+  networks:
+   - bridgeZadanie1
+  links:
+   - mysql
+  depends_on:
+   - mysql
+  command: tail -F /dev/null
+networks:
+ bridgeZadanie1:
+  driver: bridge
